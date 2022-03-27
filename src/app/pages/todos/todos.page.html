@@ -1,0 +1,14 @@
+<div>
+    <input type="text" [(ngModel)]="nomeTask"><button (click)="addTask(nomeTask)">+</button>
+    <tr *ngFor="let item of listaTask">
+      <ng-container *ngIf="!item.completed">
+          <td>{{ item.title }}</td>
+          <button class="completed" (click)="completedTask(this.item.id)">
+        -
+      </button>
+
+      </ng-container>
+  </tr>
+</div>
+
+
